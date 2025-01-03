@@ -1,0 +1,16 @@
+% 提取工作区数据
+t = out.t;  % 仿真时间
+x_d = out.x_d; % x 数据
+y_d = out.y_d; % y 数据
+z_d = out.z_d; % z 数据
+
+x_act=out.pos_act.
+
+% 绘制三维图
+figure;
+plot3(x_d, y_d, z_d, 'g-');
+grid on;
+xlabel('x-axis');
+ylabel('y-axis');
+zlabel('z-axis');
+title('3D Trajectory');
