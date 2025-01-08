@@ -14,8 +14,8 @@ function [x, y, phi_rad] = solve_with_heading(u_x, u_y, psi_cur_rad)
 
     % 初始 psi_cur_ang 为 psi_cur_rad转化为角度
     psi_cur_ang = psi_cur_rad*180/pi;        %当前航向角弧度转化为角度
-    psi_min=round(psi_cur_ang-10);
-    psi_max=round(psi_cur_ang+10);
+    psi_min=round(psi_cur_ang-5);
+    psi_max=round(psi_cur_ang+5);
 
     %遍历当前航向角左右各20度，寻找一个最合适的新航向角
     for phi_ang = psi_min :1: psi_max
