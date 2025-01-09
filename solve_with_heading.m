@@ -48,14 +48,6 @@ function [x, y, phi_rad] = solve_with_heading(u_x, u_y, psi_cur_rad)
     x = x_temp;
     y = y_temp;
 
-    %psi限幅[-pi,pi]
-    if psi_temp > pi
-        psi_temp = pi;
-    end
-    if psi_temp < -pi
-        psi_temp = -pi;
-    end
-
     %phi_rad = mod(psi_temp, pi/2);
     %phi_rad = mod(psi_temp + pi, 2 * pi) - pi;
     phi_rad = psi_temp;
